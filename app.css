@@ -1,0 +1,127 @@
+@media (max-width: 768px) { /* use the max to specify at each container level */
+    .specifictd {    
+        width:360px;  /* adjust to desired wrapping */
+        display:table;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }
+    .navbar > .container {
+    text-align: center;
+ }
+ .navbar-header {
+    float: none;
+    display: inline-block;
+ }
+ .navbar-brand {
+    float: none;
+    display: inline-block;
+ }
+ .navbar .navbar-nav {
+    float: none;
+    display: inline-block;
+    clear: none;
+ }
+ .navbar .navbar-nav > li {
+    float: none;
+    display: inline-block;
+ }
+ .navbar .navbar-nav > li li {
+    text-align: left
+ }
+ /*add id of centerednav on the collapse or it won't work*/
+ .collapse.navbar-collapse#centerednav {
+    float: none;
+    display: inline-block!important;
+    width: auto;
+    clear: none;
+ }
+}
+
+.droparea {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+    float: left;
+    line-height: 200px;
+    text-align: center;
+}
+
+.imagearea {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+    float: left;
+    line-height: 200px;
+    text-align: center;
+}
+
+.imageinside{
+    max-width:100%;
+    max-height:100%;
+}
+.col-xs-4 {
+    /*background-color: #e3e3e3;*/
+}
+
+.tablearea {
+    background-color: #e3e3e3;
+    word-wrap: break-word;
+    /*width: 10px;*/
+    /*min-height: 1000px;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+   /* float: left;*/
+    /*margin-left: 10px;*/
+
+}
+
+
+.tablearea3{
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+span {
+  -ms-word-break: break-all;
+  word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+.is-breakable {
+  word-break: break-all;
+
+}
+p {word-wrap:break-word;}
+.login{
+    background-color: gray;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+
+}
+
+
+.container { width: @container-desktop !important; }
+
+.navbar .navbar-nav .log {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}

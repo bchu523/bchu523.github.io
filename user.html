@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sample Page</title>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#"><span style="color:#5DADE2;">Item</span><span style="color:#F00;">smega</span>gur</a>
+    </div>
+    <ul class="nav navbar-nav log" id ="log">
+    </ul>
+  </div>
+</nav>
+<div class="row">
+    <div class="col-xs-8 is-breakable">
+        <div class="tablearea is-breakable" id="tablearea"></div>
+    </div>
+    <div class="col-xs-4">
+        <div class="loginarea" id="loginarea"></div>
+    </div>
+<div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script type="text/x-handlebars-template" id="tableTemplate">
+{{#grouped_each 3 filenames}}
+  <div class="row is-breakable">
+    {{#each this }}
+    <span class="tablearea3 is-breakable">
+      <div class="col-xs-4 is-breakable">
+        {{this}}
+      </div>
+      </span>
+    {{/each}}
+  </div>
+{{/grouped_each}}
+</script>
+<script type="text/x-handlebars-template" id="logged-template">
+<li id="logbutton"><a href="#">Logout</a></li>
+</script>
+<script type="text/x-handlebars-template" id="login-template">
+<h2>Login form</h2>
+  <form action="/login" method="POST">
+    <div class="form-group">
+      <label for="Username">Login:</label>
+      <input type="text" class="form-control" id="email" placeholder="username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="password" name="password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  </div>
+    </form>
+</div>
+
+</script>
+
+
+<script src="users.js">
+</script>
+</body>
+</html>
