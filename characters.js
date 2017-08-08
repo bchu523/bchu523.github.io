@@ -35,6 +35,9 @@ $( "li.item-ii" ).find( "li" ).css( "background-color", "red" );
         $(this).parent().parent().find(".input").hide();
         var character = $(this).parent().parent().find('#usr').val();
         $(this).parent().parent().find("#char").attr("src",character);
+        var charactername = $(this).parent().parent().find('#usrname').val();
+        $(this).parent().parent().find("#charname").text(charactername);
+
         var item1 = $(this).parent().parent().find('#item1').val();
         $(this).parent().parent().find(".display>#i1>#i1").attr("src",item1);
         $(this).parent().parent().find(".display>#tooltip").attr("src",item1);
