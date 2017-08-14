@@ -4,7 +4,7 @@ $(document).ready(function(){
     return function () {return counter += 1;}
     })();
     $(".table").on("click","tr>td>#hide",function(){
-        $("#tooltip").attr('id', 'tooltiph');
+        //$("#tooltip").attr('id', 'tooltiph');
         $(this).parent().parent().find(".display").hide();
         $(this).parent().parent().find(".input").show();
         //$(this).parent().parent().find("#tooltip").show();
@@ -16,7 +16,7 @@ $( "li.item-ii" ).find( "li" ).css( "background-color", "red" );
 
     $('.table').on("click", "tr>td>#btn",function(){
         //$(this).parent().parent().find("#tooltip").hide();
-        $("#tooltiph").attr('id', 'tooltip');
+        //$("#tooltiph").attr('id', 'tooltip');
 
         var items  = $(this).parent().parent().find( ".equip" )
         console.log(items);
@@ -50,12 +50,12 @@ $( "li.item-ii" ).find( "li" ).css( "background-color", "red" );
         //console.log(id)
                 var id = add();
                 console.log(id);
-                $(this).parent().parent().find(".equip").append('<img src="swrod.jpg"  id="tooltiph"><div class="item"><img src="Eqp_Sweetwater_Shining_Rod.png" id="i1"><div class="input"> <div class="form-group"> <label for="item1">Icon:</label> <input type="text" class="form-control" id="item1" value="Eqp_Sweetwater_Shining_Rod.png"></div> <div class="form-group"> <label for="item2">Tooltip:</label> <input type="text" class="form-control" id="item2" value="swrod.jpg"></div>  <a class="remove_block" href="#">Remove</a></div></div></div>'); 
+                $(this).parent().parent().find(".equip").append('<div class="item"> <img src="swrod.jpg"  id="tooltip"><div class="i1">  <img src="Eqp_Sweetwater_Shining_Rod.png" id="i1"></div><div class="input"> <div class="form-group"> <label for="item1">Icon:</label> <input type="text" class="form-control" id="item1" value="Eqp_Sweetwater_Shining_Rod.png"></div> <div class="form-group"> <label for="item2">Tooltip:</label> <input type="text" class="form-control" id="item2" value="swrod.jpg"></div>  <a class="remove_block" href="#">Remove</a></div></div></div>'); 
     //$("#tooltip").attr('id', 'tooltiph');
 
     //$(this).parent().parent().parent().parent().parent().append('<img src="swrod.jpg"  id="tooltip">');
     $(".input").show();
-    //$(this).parent().parent().find("#tooltip").show();
+    $(this).parent().parent().find("#tooltip").hide();
 
 
 
@@ -64,13 +64,14 @@ $( "li.item-ii" ).find( "li" ).css( "background-color", "red" );
 
 $(".table").on({
     mouseover: function () {
-        $("#tooltip").show();
+        console.log(this);
+       $(this).parent().parent().find("#tooltip").show();
     }
     ,
     mouseleave: function () {
-        $("#tooltip").hide();
+       $(this).parent().parent().find("#tooltip").hide();
     }}
-,"tr>td>.equip");
+,"tr>td>.equip>.item>.i1>img#i1");
 
 
 
